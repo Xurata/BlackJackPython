@@ -216,7 +216,7 @@ class Blackjack:
         acecount = self.countaces(cardstocount)
         if (newtotal > 21 and acecount >=1):
             newtotal = newtotal - 10
-        return player + " were dealt a " + str(newcard) + " The hand totals " + str(newtotal) + " ."
+        return player + _(" were dealt a ") + str(newcard) + _(" The hand totals ") + str(newtotal) + " ."
     def countaces(self, hand):
         # Counts aces so they can go from 11-1 if needed
         hand2 = str(hand)

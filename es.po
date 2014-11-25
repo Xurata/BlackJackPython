@@ -55,7 +55,7 @@ msgstr "Ahora tienes "
 
 #: blackjack.py:101 blackjack.py:238
 msgid " chips."
-msgstr "fichas."
+msgstr " fichas."
 
 #: blackjack.py:103
 msgid "You are broke!"
@@ -88,7 +88,7 @@ msgstr " tiene "
 
 #: blackjack.py:129
 msgid "Dealer busts!"
-msgstr "¡La banca pierde!"
+msgstr "¡El repartidor pierde!"
 
 #: blackjack.py:134
 msgid "You both have "
