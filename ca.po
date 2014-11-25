@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mauro Churata xurata@gmail.com, 2014.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BlackJack final 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-25 06:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mauro Fernando Churata xurata@gmail.com\n"
+"Language-Team: English <LL@li.org>\n"
+"Language: Catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blackjack.py:23
+msgid "Hearts"
+msgstr "Cors"
+
+#: blackjack.py:23
+msgid "Diamonds"
+msgstr "Diamants"
+
+#: blackjack.py:23
+msgid "Clubs"
+msgstr "Trevols"
+
+#: blackjack.py:23
+msgid "Spades"
+msgstr "Espases"
+
+#: blackjack.py:48
+msgid "Player"
+msgstr "Jugador"
+
+#: blackjack.py:62
+msgid "What is your name? "
+msgstr "Com es diu? "
+
+#: blackjack.py:95
+msgid "Welcome to Blackjack!"
+msgstr "Benvingut a Blackjack!"
+
+#: blackjack.py:98
+msgid "The score is >>"
+msgstr "La puntuacio es >>"
+
+#: blackjack.py:101
+msgid "You now have "
+msgstr "Ara tens "
+
+#: blackjack.py:101 blackjack.py:238
+msgid " chips."
+msgstr " fitxes."
+
+#: blackjack.py:103
+msgid "You are broke!"
+msgstr "Has trencat!"
+
+#: blackjack.py:104
+msgid "Come again soon!"
+msgstr "Torni aviat!"
+
+#: blackjack.py:106
+msgid "Want to play again? (y/q) "
+msgstr "Vol jugar un altre cop? (y/q) "
+
+#: blackjack.py:116
+msgid "Goodbye"
+msgstr "Adeu"
+
+#: blackjack.py:121 blackjack.py:127 blackjack.py:141 blackjack.py:148
+#: blackjack.py:155 blackjack.py:238
+msgid "You have "
+msgstr "Tu tens "
+
+#: blackjack.py:123
+msgid "Bust..."
+msgstr "Perds..."
+
+#: blackjack.py:128 blackjack.py:142 blackjack.py:149 blackjack.py:156
+msgid " has "
+msgstr " te "
+
+#: blackjack.py:129
+msgid "Dealer busts!"
+msgstr "El repartidor perd!"
+
+#: blackjack.py:134
+msgid "You both have "
+msgstr "Tots dos tenen "
+
+#: blackjack.py:135
+msgid "It is a tie!"
+msgstr "Es un empat!"
+
+#: blackjack.py:143
+msgid "BLACKJACK!"
+msgstr "BLACKJACK!"
+
+#: blackjack.py:150
+msgid "You win!"
+msgstr "Tu guanyas!"
+
+#: blackjack.py:157
+msgid "You lose..."
+msgstr "Tu perds..."
+
+#: blackjack.py:219
+msgid " were dealt a "
+msgstr " has rebut un "
+
+#: blackjack.py:219
+msgid " The hand totals "
+msgstr " total en mans "
+
+#: blackjack.py:242 blackjack.py:246 blackjack.py:250
+msgid "How much do you want to bet? "
+msgstr "Quant vols apostar? "
+
+#: blackjack.py:245
+msgid "You don't have that much money..."
+msgstr "No tens aquesta quantitat de diners... "
+
+#: blackjack.py:249
+msgid "You have to bet something! "
+msgstr "Has d'apostar alguna cosa! "
+
+#: blackjack.py:252 blackjack.py:255
+msgid "Please enter a number..."
+msgstr "Sisplau, introdueixi un nombre..."
+
+#: blackjack.py:258
+msgid "Dealing..."
+msgstr "Repartint..."
+
+#: blackjack.py:259
+msgid "You hold "
+msgstr "Tu tens "
+
+#: blackjack.py:260
+msgid "Your hand totals "
+msgstr "El teu total en mans "
+
+#: blackjack.py:261 blackjack.py:298
+msgid " shows "
+msgstr " ensenya "
+
+#: blackjack.py:264
+msgid "Do you want to hit? (y/n) "
+msgstr "Vols agafar? (y/n) "
+
+#: blackjack.py:275
+msgid "Bust!"
+msgstr "Perds!"
+
+#: blackjack.py:289
+msgid " hits a "
+msgstr " agafa un "
+
+#: blackjack.py:294
+msgid " busts!"
+msgstr " perd!"
