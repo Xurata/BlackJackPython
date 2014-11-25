@@ -6,154 +6,154 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Blackjack final 3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-25 05:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Churata Mauro xurata@gmail.com\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: SPANISH\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: blackjack.py:23
 msgid "Hearts"
-msgstr ""
+msgstr "Corazones"
 
 #: blackjack.py:23
 msgid "Diamonds"
-msgstr ""
+msgstr "Diamantes"
 
 #: blackjack.py:23
 msgid "Clubs"
-msgstr ""
+msgstr "Treboles"
 
 #: blackjack.py:23
 msgid "Spades"
-msgstr ""
+msgstr "Espadas"
 
 #: blackjack.py:48
 msgid "Player"
-msgstr ""
+msgstr "Jugadors"
 
 #: blackjack.py:62
 msgid "What is your name? "
-msgstr ""
+msgstr "¿Como te llamas? "
 
 #: blackjack.py:95
 msgid "Welcome to Blackjack!"
-msgstr ""
+msgstr "¡Bienvenido a Blackjack!"
 
 #: blackjack.py:98
 msgid "The score is >>"
-msgstr ""
+msgstr "La puntuacion es >>"
 
 #: blackjack.py:101
 msgid "You now have "
-msgstr ""
+msgstr "Ahora tienes "
 
 #: blackjack.py:101 blackjack.py:238
 msgid " chips."
-msgstr ""
+msgstr "fichas."
 
 #: blackjack.py:103
 msgid "You are broke!"
-msgstr ""
+msgstr "¡Estas en la quiebra!"
 
 #: blackjack.py:104
 msgid "Come again soon!"
-msgstr ""
+msgstr "¡Vuelve pronto!"
 
 #: blackjack.py:106
 msgid "Want to play again? (y/q) "
-msgstr ""
+msgstr "¿Quieres jugar otra vez? (y/q) "
 
 #: blackjack.py:116
 msgid "Goodbye"
-msgstr ""
+msgstr "Adios"
 
 #: blackjack.py:121 blackjack.py:127 blackjack.py:141 blackjack.py:148
 #: blackjack.py:155 blackjack.py:238
 msgid "You have "
-msgstr ""
+msgstr "Tienes "
 
 #: blackjack.py:123
 msgid "Bust..."
-msgstr ""
+msgstr "Pierdes..."
 
 #: blackjack.py:128 blackjack.py:142 blackjack.py:149 blackjack.py:156
 msgid " has "
-msgstr ""
+msgstr " tiene "
 
 #: blackjack.py:129
 msgid "Dealer busts!"
-msgstr ""
+msgstr "¡La banca pierde!"
 
 #: blackjack.py:134
 msgid "You both have "
-msgstr ""
+msgstr "Ambos teneis "
 
 #: blackjack.py:135
 msgid "It is a tie!"
-msgstr ""
+msgstr "¡Es un empate!"
 
 #: blackjack.py:143
 msgid "BLACKJACK!"
-msgstr ""
+msgstr "¡BLACKJACK!"
 
 #: blackjack.py:150
 msgid "You win!"
-msgstr ""
+msgstr "¡Tu ganas!"
 
 #: blackjack.py:157
 msgid "You lose..."
-msgstr ""
+msgstr "Tu pierdes..."
 
 #: blackjack.py:242 blackjack.py:246 blackjack.py:250
 msgid "How much do you want to bet? "
-msgstr ""
+msgstr "¿Cuando quieres apostar?"
 
 #: blackjack.py:245
 msgid "You don't have that much money..."
-msgstr ""
+msgstr "No tienes esa cantidad de dinero..."
 
 #: blackjack.py:249
 msgid "You have to bet something! "
-msgstr ""
+msgstr "¡Tienes que apostar algo! "
 
 #: blackjack.py:252 blackjack.py:255
 msgid "Please enter a number..."
-msgstr ""
+msgstr "Por favor, indique un numero..."
 
 #: blackjack.py:258
 msgid "Dealing..."
-msgstr ""
+msgstr "Repartiendo..."
 
 #: blackjack.py:259
 msgid "You hold "
-msgstr ""
+msgstr "Mantienes "
 
 #: blackjack.py:260
 msgid "Your hand totals "
-msgstr ""
+msgstr "Total en mano "
 
 #: blackjack.py:261 blackjack.py:298
 msgid " shows "
-msgstr ""
+msgstr " muestra "
 
 #: blackjack.py:264
 msgid "Do you want to hit? (y/n) "
-msgstr ""
+msgstr "¿Quieres pedir? (y/n) "
 
 #: blackjack.py:275
 msgid "Bust!"
-msgstr ""
+msgstr "Pierde!"
 
 #: blackjack.py:289
 msgid " hits a "
-msgstr ""
+msgstr " pide un "
 
 #: blackjack.py:294
 msgid " busts!"
-msgstr ""
+msgstr " pierde!"
