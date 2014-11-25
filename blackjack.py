@@ -3,6 +3,13 @@
 # Regular win pays back bet and blackjack pays double and tie pays back to normal
 # By djnm 2008
 #################################################################################
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#For translation
+import gettext
+gettext.install(domain='BlackJack', localedir='locales')
 # For dealing
 from random import *
 # To close program
@@ -13,7 +20,7 @@ import string
 import curses
 # Creates a card with a suit and value
 class Card:
-    suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+    suits = [_("Hearts") , _("Diamonds"), _("Clubs"), _("Spades")]
     values = ["2","3","4","5","6","7","8","9","Ten","Jack","Queen","King","Ace"]
     def __init__(self, value, suit):
         self.value, self.suit = value, suit
@@ -38,7 +45,7 @@ class Deck:
             print card
 # Player class with name, chips etc.
 class Player:
-    def __init__(self, name = "Player"):
+    def __init__(self, name = _("Player")):
         self.hand = []
         self.name = name
         self.chips = 100
@@ -52,7 +59,7 @@ class Player:
     def setchips(self, add):
         self.chips = self.chips + add
     def setname(self):
-        self.name = raw_input("What is your name? ")
+        self.name = raw_input (_("What is your name? "))
     def getname(self):
         return self.name
     def setscore(self):
@@ -85,18 +92,18 @@ class Blackjack:
         self.thedealer = Dealer()
         self.humanplayer = Player()
     def intro(self):
-        print "Welcome to Blackjack!"
+        print _("Welcome to Blackjack!")
         self.humanplayer.setname()
     def replay(self):
-        print "The score is >>"
+        print _("The score is >>")
         print str(self.thedealer.getname()) + ": " + str(self.thedealer.getscore())
         print str(self.humanplayer.getname()) + ": " + str(self.humanplayer.getscore())
-        print "You now have " + str(self.humanplayer.getchips()) + " chips."
+        print _("You now have ") + str(self.humanplayer.getchips()) + _(" chips.")
         if self.humanplayer.getchips() == 0:
-            print "You are broke!"
-            print "Come again soon!"
+            print _("You are broke!")
+            print _("Come again soon!")
             sys.exit()
-        wanttoreplay = raw_input("Want to play again? (y/q) ")
+        wanttoreplay = raw_input(_("Want to play again? (y/q) "))
         if wanttoreplay == "y":
             ## FROM http://swapoff.org/wiki/blog/2006-11-01-terminal-manipulation-in-python
             curses.setupterm()
@@ -106,48 +113,48 @@ class Blackjack:
             ## End citation
             self.playgame()
         else:
-            print "Goodbye"
+            print _("Goodbye")
             sys.exit()
     def checkresults(self, totalofhand, dealertotal, bet):
         # Checks who won the hand
         if totalofhand > 21:
-            print "You have " + str(totalofhand)
+            print _("You have ") + str(totalofhand)
             print self.thedealer.getname() + " has " + str(dealertotal)
-            print "Bust..."
+            print _("Bust...")
             self.thedealer.setscore()
             self.replay()
         if dealertotal > 21:
-            print "You have " + str(totalofhand)
-            print self.thedealer.getname() + " has " + str(dealertotal)
-            print "Dealer busts!"
+            print _("You have ") + str(totalofhand)
+            print self.thedealer.getname() + _(" has ") + str(dealertotal)
+            print _("Dealer busts!")
             self.humanplayer.setscore()
             self.humanplayer.setchips(2*bet)
             self.replay()
         if totalofhand == dealertotal:
-            print "You both have " + str(totalofhand)
-            print "It is a tie!"
+            print _("You both have ") + str(totalofhand)
+            print _("It is a tie!")
             self.humanplayer.setchips(bet)
             self.thedealer.setscore()
             self.humanplayer.setscore()
             self.replay()
         if totalofhand == 21:
-            print "You have " + str(totalofhand)
-            print self.thedealer.getname() + " has " + str(dealertotal)
-            print "BLACKJACK!"
+            print _("You have ") + str(totalofhand)
+            print self.thedealer.getname() + _(" has ") + str(dealertotal)
+            print _("BLACKJACK!")
             self.humanplayer.setchips(3*bet)
             self.humanplayer.setscore()
             self.replay()
         if totalofhand > dealertotal:
-            print "You have " + str(totalofhand)
-            print self.thedealer.getname() + " has " + str(dealertotal)
-            print "You win!"
+            print _("You have ") + str(totalofhand)
+            print self.thedealer.getname() + _(" has ") + str(dealertotal)
+            print _("You win!")
             self.humanplayer.setchips(2*bet)
             self.humanplayer.setscore()
             self.replay()
         if totalofhand < dealertotal:
-            print "You have " + str(totalofhand)
-            print self.thedealer.getname() + " has " + str(dealertotal)
-            print "You lose..."
+            print _("You have ") + str(totalofhand)
+            print self.thedealer.getname() + _(" has ") + str(dealertotal)
+            print _("You lose...")
             self.thedealer.setscore()
             self.replay()
     def totalhand(self, cardstototal):
@@ -228,33 +235,33 @@ class Blackjack:
         showingtotal = self.totalshowing(self.thedealer.gethand())
         playeraces = self.countaces(self.humanplayer.gethand())
         dealeraces = self.countaces(self.thedealer.gethand())
-        print "You have " + str(self.humanplayer.getchips()) + " chips."
+        print _("You have ") + str(self.humanplayer.getchips()) + _(" chips.")
         chiploop = 0
         while chiploop == 0:
             try:
-                moneybet = input("How much do you want to bet? ")
+                moneybet = input(_("How much do you want to bet? "))
                 # Ensures bet amount is not greater than amount that you have
                 while moneybet > self.humanplayer.getchips():
-                    print "You don't have that much money..."
-                    moneybet = input("How much do you want to bet? ")
+                    print _("You don't have that much money...")
+                    moneybet = input(_("How much do you want to bet? "))
                 chiploop = 1
                 while moneybet <=0:
-                    print "You have to bet something! "
-                    moneybet = input("How much do you want to bet? ")
+                    print _("You have to bet something! ")
+                    moneybet = input(_("How much do you want to bet? "))
             except NameError:
-                print "Please enter a number..."
+                print _("Please enter a number...")
                 chipploop = 0
             except SyntaxError:
-                print "Please enter a number..."
+                print _("Please enter a number...")
                 chipploop = 0
         self.humanplayer.setchips((0-moneybet))
-        print "Dealing..."
-        print "You hold " + str(self.humanplayer.gethand())
-        print "Your hand totals "+ str(NT2)
-        print self.thedealer.getname() + " shows " + str(showingtotal)
+        print _("Dealing...")
+        print _("You hold ") + str(self.humanplayer.gethand())
+        print _("Your hand totals ")+ str(NT2)
+        print self.thedealer.getname() + _(" shows ") + str(showingtotal)
         newshowingtotal = showingtotal
         while NT2 <= 21:
-            hittheguy = raw_input("Do you want to hit? (y/n) ")
+            hittheguy = raw_input(_("Do you want to hit? (y/n) "))
             if hittheguy == "y":
                 NT22 = self.hit(NT2, "You", self.humanplayer.gethand())
                 print NT22
@@ -265,7 +272,7 @@ class Blackjack:
                 while (NT2 > 21 and self.countaces(self.humanplayer.gethand()) >=1):
                     NT2 = NT2 - 10
                 if NT2 > 21:
-                    print "Bust!"
+                    print _("Bust!")
                     self.thedealer.setscore()
                     self.replay()
             else:
@@ -279,16 +286,16 @@ class Blackjack:
             NDT2 = str(NIDT[-2])
             dealertotal = int(NDT2)
       
-            print self.thedealer.getname() + " hits a " + str(str(string.join(hitcard[-3:])))
+            print self.thedealer.getname() + _(" hits a ") + str(str(string.join(hitcard[-3:])))
             while (newshowingtotal > 21 and self.countaces(self.thedealer.gethand()) >=1):
                 newshowingtotal = newshowingtotal - 10
             newshowingtotal = newshowingtotal + int(self.totalshowing(hitcard2))
             if newshowingtotal > 21:
-                print self.thedealer.getname() + " busts!"
+                print self.thedealer.getname() + _(" busts!")
                 self.humanplayer.setscore()
                 self.replay()
             else:
-                print self.thedealer.getname() + " shows " + str(newshowingtotal)
+                print self.thedealer.getname() + _(" shows ") + str(newshowingtotal)
         self.checkresults(NT2, dealertotal, moneybet)
     
 def main():
