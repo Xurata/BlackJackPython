@@ -9,7 +9,7 @@
 
 #For translation
 import gettext
-gettext.install(domain='BlackJack', localedir='locales')
+gettext.install(domain='blackjack', localedir='locales')
 # For dealing
 from random import *
 # To close program
